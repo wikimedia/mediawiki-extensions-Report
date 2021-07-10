@@ -12,6 +12,7 @@ class SpecialReport extends SpecialPage {
 	}
 
 	private function showError( string $key, $par = null ) {
+		$out = $this->getOutput();
 		$out->addHTML(Html::element(
 			'p', [ 'class' => 'error' ],
 			$par ? wfMessage( $key, $par )->text() :
