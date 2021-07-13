@@ -16,10 +16,9 @@ Then add the following line to your `LocalSettings.php`:
 ```
 wfLoadExtension( 'Report' );
 ```
-Finally, from the root directory of your wiki, run the following commands:
+Finally, from the root directory of your wiki, run the following command:
 ```
-cd maintenance
-php update.php
+php maintenance/update.php
 ```
 This will create the necessary tables that the extension needs.
 
