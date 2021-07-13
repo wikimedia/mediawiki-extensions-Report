@@ -5,7 +5,7 @@
 	],
 	"url": "https://www.mediawiki.org/wiki/Extension:Report",
 	"descriptionmsg": "report-desc",
-	"license-name": "GPLv3",
+	"license-name": "GPL-3.0-only",
 	"type": "specialpage",
 	"AutoloadNamespaces": {
 		"MediaWiki\\Extension\\Report\\": "includes/"

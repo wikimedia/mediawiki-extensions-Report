@@ -5,6 +5,7 @@
 			"R4356th"
 		]
 	},
+	"action-report": "The action of reporting revisions, shown in permission error messages",
 	"action-handle-reports": "String added to an error message shown on Special:HandleReports explaining the action cannot be performed when someone without permission tries to access the page",
 	"report": "Title of Special:Report as appears in Special:SpecialPages",
 	"report-desc": "{{desc|name=Report|url=https://www.mediawiki.org/wiki/Extension:Report}}",

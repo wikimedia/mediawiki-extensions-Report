@@ -5,6 +5,7 @@
 			"R4356th"
 		]
 	},
+	"action-report": "report revisions",
 	"action-handle-reports": "handle reports",
 	"report": "Report a revision",
 	"report-desc": "Adds a [[Special:Report|special page]] to report revisions for review.",
