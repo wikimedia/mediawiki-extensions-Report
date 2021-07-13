@@ -8,15 +8,17 @@
 
 $specialPageAliases = [];
 
-/** English
+/**
+ * English
  * @author Ken Hilton
-*/
+ */
 $specialPageAliases['en'] = [
 	'Report' => [ 'Report' ],
 	'HandleReports' => [ 'HandleReports', 'Handle Reports' ]
 ];
 
-/** Japanese
+/**
+ * Japanese
  * @author apple502j
  */
 $specialPageAliases['ja'] = [
@@ -24,10 +26,11 @@ $specialPageAliases['ja'] = [
 	'HandleReports' => [ '報告された版の確認' ]
 ];
 
-/** Turkish
+/**
+ * Turkish
  * @author ahmetlii
  */
 $specialPageAliases['tr'] = [
 	'Report' => [ 'Bildirim' ],
-	'HandleReports' => [ 'BildirimleriKontrolEt', 'Bildirimleri Kontrol Et']
+	'HandleReports' => [ 'BildirimleriKontrolEt', 'Bildirimleri Kontrol Et' ]
 ];

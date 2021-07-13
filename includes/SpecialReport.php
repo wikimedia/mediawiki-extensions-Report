@@ -1,9 +1,9 @@
 <?php
 namespace MediaWiki\Extension\Report;
 
-use SpecialPage;
 use Html;
 use MediaWiki\MediaWikiServices;
+use SpecialPage;
 
 class SpecialReport extends SpecialPage {
 
@@ -11,15 +11,23 @@ class SpecialReport extends SpecialPage {
 		parent::__construct( 'Report' );
 	}
 
+	/**
+	 * @param string $key
+	 * @param null $par
+	 */
 	private function showError( string $key, $par = null ) {
 		$out = $this->getOutput();
-		$out->addHTML(Html::element(
+		$out->addHTML( Html::element(
 			'p', [ 'class' => 'error' ],
 			$par ? wfMessage( $key, $par )->text() :
 			wfMessage( $key )->text()
-		));
+		) );
 	}
 
+	/**
+	 * @param string|null $par
+	 * @return void
+	 */
 	public function execute( $par ) {
 		$user = $this->getUser();
 		$out = $this->getOutput();
@@ -30,67 +38,74 @@ class SpecialReport extends SpecialPage {
 			$this->showError( 'report-error-missing-perms' );
 			return;
 		}
-		if (!ctype_digit( $par )) {
+		if ( !ctype_digit( $par ) ) {
 			$this->showError( 'report-error-invalid-revid', $par );
 			return;
 		}
 		$rev = MediaWikiServices::getInstance()->getRevisionLookup()->getRevisionById( (int)$par );
-		if (!$rev) {
+		if ( !$rev ) {
 			$this->showError( 'report-error-invalid-revid', $par );
 			return;
 		}
 		$dbr = wfGetDB( DB_REPLICA );
-		if ($dbr->selectRow( 'report_reports', [ 'report_id' ], [
+		if ( $dbr->selectRow( 'report_reports', [ 'report_id' ], [
 			'report_revid' => $rev->getId(),
 			'report_user' => $user->getId()
-		], __METHOD__ )) {
+		], __METHOD__ ) ) {
 			$out->addWikiMsg( 'report-already-reported' );
 			return;
 		}
 		$request = $this->getRequest();
-		if ($request->wasPosted()) {
+		if ( $request->wasPosted() ) {
 			return self::onPost( $par, $out, $request, $user );
 		}
 		$out->setIndexPolicy( 'noindex' );
 		$out->addWikiMsg( 'report-intro', $par );
-		$out->addHTML(Html::openElement('form', [ 'method' => 'POST' ]));
-		$out->addHTML(Html::hidden('revid', $par,));
-		$out->addHTML(Html::textarea('reason'));
-		$out->addHTML(Html::hidden('token', $user->getEditToken()));
-		$out->addHTML(Html::element(
+		$out->addHTML( Html::openElement( 'form', [ 'method' => 'POST' ] ) );
+		$out->addHTML( Html::hidden( 'revid', $par ) );
+		$out->addHTML( Html::textarea( 'reason' ) );
+		$out->addHTML( Html::hidden( 'token', $user->getEditToken() ) );
+		$out->addHTML( Html::element(
 			'button',
 			[ 'type' => 'submit' ],
 			wfMessage( 'report-submit' )->text()
-		));
-		$out->addHTML(Html::closeElement( 'form' ));
+		) );
+		$out->addHTML( Html::closeElement( 'form' ) );
 	}
 
-	static public function onPost( $par, $out, $request, $user ) {
-		if (!$user->matchEditToken($request->getText( 'token' ))) {
+	/**
+	 * @param string|null $par
+	 * @param OutputPage $out
+	 * @param WebRequest $request
+	 * @param User $user
+	 */
+	public static function onPost( $par, $out, $request, $user ) {
+		if ( !$user->matchEditToken( $request->getText( 'token' ) ) ) {
 			$out->addWikiMsg( 'sessionfailure' );
 			return;
 		}
-		if (!$request->getText('reason')) {
-			$out->addHTML(Html::element(
-				'p', [ 'class' => 'error '],
+		if ( !$request->getText( 'reason' ) ) {
+			$out->addHTML( Html::element(
+				'p', [ 'class' => 'error ' ],
 				wfMessage( 'report-error-missing-reason' )->text()
-			));
+			) );
 			return;
 		}
 		$dbw = wfGetDB( DB_MASTER );
-		$dbw->startAtomic(__METHOD__);
+		$dbw->startAtomic( __METHOD__ );
 		$dbw->insert( 'report_reports', [
 			'report_revid' => (int)$par,
-			'report_reason' => $request->getText('reason'),
+			'report_reason' => $request->getText( 'reason' ),
 			'report_user' => $user->getId(),
 			'report_user_text' => $user->getName(),
 			'report_timestamp' => wfTimestampNow()
 		], __METHOD__ );
-		$dbw->endAtomic(__METHOD__);
+		$dbw->endAtomic( __METHOD__ );
 		$out->addWikiMsg( 'report-success' );
-		$out->addWikiMsg( 'returnto', '[[' . SpecialPage::getTitleFor('Diff', $par)->getPrefixedText() . ']]' );
+		$out->addWikiMsg( 'returnto', '[[' . SpecialPage::getTitleFor( 'Diff', $par )->getPrefixedText() . ']]' );
 	}
 
+	/** @inheritDoc */
 	public function getGroupName() {
 		return 'wiki';
 	}
