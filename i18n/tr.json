@@ -1,7 +1,8 @@
 {
 	"@metadata": {
-		"author": "ahmetlii",
-		"authors": []
+		"authors": [
+			"ahmetlii"
+		]
 	},
 	"report": "Bir sürümü bildir",
 	"report-desc": "Sürümleri gözden geçirilmeleri için bildirmeye yarayan bir [[Special:Report|özel sayfa]] ekler.",
