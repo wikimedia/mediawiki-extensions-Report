@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Beta16"
+		]
+	},
+	"report-error-invalid-revid": "Errore: ID versione non valido: $1",
+	"report-handling-th-timestamp": "Data e ora",
+	"report-handling-info": "Informazioni",
+	"report-handling-username": "Nome utente",
+	"report-handling-revid": "ID versione"
+}

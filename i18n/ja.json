@@ -1,6 +1,9 @@
 {
 	"@metadata": {
-		"author": "Ken Hilton"
+		"author": "Ken Hilton",
+		"authors": [
+			"MathXplore"
+		]
 	},
 	"report": "版を報告",
 	"report-desc": "確認が必要な版を報告するための[[Special:Report|特別ページ]]を追加する",
@@ -14,7 +17,7 @@
 	"report-error-missing-perms": "エラー:このページを閲覧する権限がありません。",
 	"report-handled": "確認済みの版",
 	"handlereports": "報告された版の確認",
-	"report-handling-th-reason": "理由",
+	"report-handling-th-reason": "理由を報告する",
 	"report-handling-th-user": "報告者",
 	"report-handling-th-revid": "報告された版",
 	"report-handling-th-timestamp": "日付時刻",
@@ -37,7 +40,7 @@
 	"report-reports-awaiting": "<b>$2</b>個の$1が確認待ちです。<b>ご注意ください!</b>",
 	"report-reports-awaiting-linktext": "{{PLURAL:$1|報告}}",
 	"report-has-been-handled": "この報告を確認済みとしました。",
-	"report-submit": "送信",
+	"report-submit": "報告を送信する",
 	"right-report": "管理者に変更を報告する",
 	"right-handle-reports": "変更の報告を確認する"
 }
