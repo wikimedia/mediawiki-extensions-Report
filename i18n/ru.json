@@ -1,11 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kareyac"
+			"Kareyac",
+			"Thothsum"
 		]
 	},
 	"action-handle-reports": "обрабатывать отчеты",
 	"report-error-missing-reason": "Пожалуйста, укажите причину ниже.",
+	"handlereports": "Обработка отчетов об изменениях",
 	"report-handling-info": "Информация",
 	"report-submit": "Отправить отчет",
 	"right-report": "Сообщить об изменениях для внимания администратора"
