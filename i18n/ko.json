@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Apzp79",
+			"Ykhwong"
+		]
+	},
+	"report-error-missing-reason": "아래에 이유를 기입해 주십시오.",
+	"report-handled": "처리됨",
+	"report-handling-th-user": "사용자 신고",
+	"report-handling-th-timestamp": "타임스탬프",
+	"report-handling-info": "정보",
+	"report-handling-username": "사용자 이름",
+	"report-handling-revid": "판 ID",
+	"report-handling-handledq": "처리?",
+	"report-handling-handled": "처리됨",
+	"report-handling-no-reports": "보고서가 없습니다.",
+	"report-reports-awaiting-linktext": "{{PLURAL:$1|보고서}}",
+	"report-submit": "보고서 제출"
+}

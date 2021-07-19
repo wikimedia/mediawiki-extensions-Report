@@ -1,0 +1,31 @@
+{
+	"@metadata": {
+		"authors": [
+			"MITO"
+		]
+	},
+	"action-report": "raportoi versioista",
+	"action-handle-reports": "käsittele raportteja",
+	"report": "Raportoi versiosta",
+	"report-title": "Raportoi versiosta",
+	"report-success": "Versio on raportoitu.",
+	"report-handling-title": "Käsittele versioraportteja",
+	"report-handled": "Käsitelty",
+	"report-handling-th-reason": "Raportin syy",
+	"report-handling-th-user": "Raportoidaan käyttäjästä",
+	"report-handling-th-revid": "Raportoidun version tunniste",
+	"report-handling-info": "Tietoja",
+	"report-handling-username": "Käyttäjänimi",
+	"report-handling-revid": "Versiotunniste",
+	"report-handling-view-report": "Näytä raportti",
+	"report-handling-mark-handled": "Merkitse käsitellyksi",
+	"report-handling-handledq": "Käsitelty?",
+	"report-handling-view-handled": "Näytä käsitellyt raportit",
+	"report-handling-view-nothandled": "Näytä käsittelemättömät raportit",
+	"report-handling-handled": "Käsitelty",
+	"report-handling-nothandled": "Ei käsitelty",
+	"report-handling-no-reports": "Ei raportteja.",
+	"report-report": "raportoi",
+	"report-reported": "raportoitu",
+	"report-submit": "Lähetä raportti"
+}

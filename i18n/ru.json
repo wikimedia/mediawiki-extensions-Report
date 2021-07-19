@@ -7,8 +7,19 @@
 	},
 	"action-handle-reports": "обрабатывать отчеты",
 	"report-error-missing-reason": "Пожалуйста, укажите причину ниже.",
+	"report-handling-title": "Обработка отчетов об изменениях",
+	"report-handled": "Обработано",
 	"handlereports": "Обработка отчетов об изменениях",
+	"report-handling-th-user": "Сообщить о нарушении",
+	"report-handling-th-timestamp": "Дата/время",
 	"report-handling-info": "Информация",
+	"report-handling-username": "Имя пользователя",
+	"report-handling-handledq": "Обработано?",
+	"report-handling-handled-by": "Обрабатывается",
+	"report-handling-handled": "Обработано",
+	"report-handling-no-reports": "Нет отчетов.",
+	"report-already-reported": "Вы уже сообщили об этой редакции.",
 	"report-submit": "Отправить отчет",
-	"right-report": "Сообщить об изменениях для внимания администратора"
+	"right-report": "Сообщить об изменениях для внимания администратора",
+	"right-handle-reports": "Обработка отчетов об изменениях"
 }
