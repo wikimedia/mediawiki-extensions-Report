@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Hedda",
+			"SaldırganSincap",
 			"ahmetlii"
 		]
 	},
@@ -39,7 +40,7 @@
 	"report-report": "bildir",
 	"report-reported": "bildirildi",
 	"report-already-reported": "Bu değişikliği önceden bildirdiniz.",
-	"report-reports-awaiting": "<b>$2</b> kontrol edilmeyen $1, bekliyor. <b>İlginize ihtiyaç duyuluyor!</b>",
+	"report-reports-awaiting": "<b>$2</b> kontrol edilmeyen $1, {{PLURAL:$2|bekliyor}}. <b>İlginize ihtiyaç duyuluyor!</b>",
 	"report-reports-awaiting-linktext": "{{PLURAL:$1|bildiri}}",
 	"report-has-been-handled": "Bildiri daha önceden kontrol edildi olarak işaretlendi.",
 	"report-submit": "Raporu gönder",
