@@ -4,5 +4,16 @@
 			"Eduardoaddad"
 		]
 	},
-	"report-error-missing-reason": "Por favor, preencha um motivo abaixo."
+	"report": "Reportar uma revisão",
+	"report-title": "Reportar uma revisão",
+	"report-error-missing-reason": "Por favor, preencha um motivo abaixo.",
+	"report-handling-th-timestamp": "Data e hora",
+	"report-handling-info": "Informação",
+	"report-handling-username": "Nome de usuário",
+	"report-handling-revid": "ID da revisão",
+	"report-handling-view-report": "Ver relatório",
+	"report-handling-no-reports": "Não há relatórios.",
+	"report-report": "reportar",
+	"report-reported": "reportado",
+	"report-submit": "Enviar relatório"
 }
