@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"R4356th",
+			"আফতাবুজ্জামান"
+		]
+	},
+	"report": "একটি সম্পাদনা প্রতিবেদন করতে পারে",
+	"report-desc": "পর্যালোচনার জন্য সম্পাদনা প্রতিবেদন করতে একটি [[Special:Report|বিশেষ পৃষ্ঠা]] যুক্ত করে।",
+	"report-title": "একটি সম্পাদনা রিপোর্ট করুন",
+	"report-intro": "সংশোধন $1 রিপোর্ট করার জন্য একটি কারণ পূরণ করুন:",
+	"report-error-invalid-revid": "ত্রুটি: অবৈধ সসম্পাদনা আইডি: $1",
+	"report-error-invalid-repid": "ত্রুটি: অবৈধ প্রতিবেদন আইডি: $1",
+	"report-error-missing-reason": "দয়া করে নিচে একটি কারণ পূরণ করুন।",
+	"report-success": "সম্পাদনাটি প্রতিবেদন করা হয়েছে।",
+	"report-handling-title": "সম্পাদনা প্রতিবেদনগুলি হ্যান্ডেল করুন",
+	"report-error-missing-perms": "ত্রুটি: আপনার কাছে 'handle-reports' অনুমতি নেই।",
+	"report-handled": "হ্যান্ডল করা হয়েছে",
+	"handlereports": "সম্পাদনা প্রতিবেদনগুলি হ্যান্ডেল করুন",
+	"report-handling-th-timestamp": "সময়তারিখ",
+	"report-handling-info": "তথ্য",
+	"report-handling-username": "ব্যবহারকারীর নাম",
+	"report-handling-revid": "সম্পাদনা আইডি",
+	"report-handling-view-report": "প্রতিবেদন দেখুন",
+	"report-handling-handledq": "হ্যান্ডল করা হয়েছে?",
+	"report-handling-handled": "হ্যান্ডল করা হয়েছে",
+	"report-report": "প্রতিবেদন করুন",
+	"report-reported": "প্রতিবেদনকৃত",
+	"report-already-reported": "আপনি ইতিমধ্যেই এই সম্পাদনাটি রিপোর্ট করেছেন।",
+	"report-submit": "প্রতিবেদন জমা দিন",
+	"right-handle-reports": "সম্পাদনা প্রতিবেদনগুলি হ্যান্ডেল করতে পারে"
+}
