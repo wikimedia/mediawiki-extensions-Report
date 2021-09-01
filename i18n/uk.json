@@ -38,7 +38,7 @@
 	"report-report": "звіт",
 	"report-reported": "повідомив",
 	"report-already-reported": "Ви вже повідомляли про цю версію.",
-	"report-reports-awaiting": "Очікується <b>$2</b> необроблених $1. <b>Ваша увага потрібна!</b>",
+	"report-reports-awaiting": "{{PLURAL:$2|Очікується|Очікуються}} <b>$2</b> необроблених $1. <b>Ваша увага потрібна!</b>",
 	"report-reports-awaiting-linktext": "{{PLURAL:$1|звіт|звітів}}",
 	"report-has-been-handled": "Звіт позначено як опрацьований.",
 	"report-submit": "Надіслати звіт",
