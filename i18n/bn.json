@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Greatder",
 			"R4356th",
 			"আফতাবুজ্জামান"
 		]
@@ -20,7 +21,7 @@
 	"report-handling-th-timestamp": "সময়তারিখ",
 	"report-handling-info": "তথ্য",
 	"report-handling-username": "ব্যবহারকারীর নাম",
-	"report-handling-revid": "সম্পাদনা আইডি",
+	"report-handling-revid": "পর্যালোচনা আইডি",
 	"report-handling-view-report": "প্রতিবেদন দেখুন",
 	"report-handling-handledq": "হ্যান্ডল করা হয়েছে?",
 	"report-handling-handled": "হ্যান্ডল করা হয়েছে",
