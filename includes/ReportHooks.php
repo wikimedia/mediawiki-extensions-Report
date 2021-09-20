@@ -2,6 +2,7 @@
 namespace MediaWiki\Extension\Report;
 
 use Html;
+use MediaWiki\MediaWikiServices;
 use SpecialPage;
 
 class ReportHooks {
@@ -20,14 +21,16 @@ class ReportHooks {
 	}
 
 	/**
-	 * @param int $rev
+	 * @param int $revRecord
 	 * @param array &$links
-	 * @param int $oldRev
-	 * @param User $user
+	 * @param int $oldRevRecord
+	 * @param UserIdentity $userIdentity
 	 */
-	public static function insertReportLink( $rev, &$links, $oldRev, $user ) {
-		if ( $user->isAllowed( 'report' ) && !$user->isBlocked() && !$user->isAllowed( 'handle-reports' ) ) {
-			$links[] = self::generateReportElement( $rev->getID(), $user );
+	public static function insertReportLink( $revRecord, &$links, $oldRevRecord, $userIdentity ) {
+		$user = MediaWikiServices::getInstance()->getUserFactory()->newFromUserIdentity( $userIdentity );
+		if ( $user->isAllowed( 'report' ) && !$user->isBlocked() &&
+		!$user->isAllowed( 'handle-reports' ) ) {
+			$links[] = self::generateReportElement( $revRecord->getID(), $userIdentity );
 		}
 	}
 

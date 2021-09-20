@@ -20,8 +20,8 @@
 	},
 	"Hooks": {
 		"LoadExtensionSchemaUpdates": "MediaWiki\\Extension\\Report\\ReportHooks::onLoadExtensionSchemaUpdates",
-		"HistoryRevisionTools": "MediaWiki\\Extension\\Report\\ReportHooks::insertReportLink",
-		"DiffRevisionTools": "MediaWiki\\Extension\\Report\\ReportHooks::insertReportLink",
+		"HistoryTools": "MediaWiki\\Extension\\Report\\ReportHooks::insertReportLink",
+		"DiffTools": "MediaWiki\\Extension\\Report\\ReportHooks::insertReportLink",
 		"BeforePageDisplay": "MediaWiki\\Extension\\Report\\ReportHooks::reportsAwaitingNotice"
 	},
 	"GroupPermissions": {
@@ -53,7 +53,7 @@
 	},
 	"manifest_version": 2,
 	"requires": {
-		"MediaWiki": ">= 1.31.0",
+		"MediaWiki": ">= 1.35.0",
 		"platform": {
 			"php": ">= 5.6"
 		}
