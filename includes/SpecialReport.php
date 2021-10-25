@@ -34,7 +34,7 @@ class SpecialReport extends SpecialPage {
 		$out->setPageTitle( wfMessage( 'report-title' )->escaped() );
 		$out->addModules( 'ext.report' );
 		$this->checkReadOnly();
-		if ( $user->isBlocked() || !$user->isAllowed( 'report' ) ) {
+		if ( $user->getBlock() || !$user->isAllowed( 'report' ) ) {
 			$this->showError( 'report-error-missing-perms' );
 			return;
 		}

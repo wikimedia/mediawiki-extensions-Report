@@ -28,7 +28,7 @@ class ReportHooks {
 	 */
 	public static function insertReportLink( $revRecord, &$links, $oldRevRecord, $userIdentity ) {
 		$user = MediaWikiServices::getInstance()->getUserFactory()->newFromUserIdentity( $userIdentity );
-		if ( $user->isAllowed( 'report' ) && !$user->isBlocked() &&
+		if ( $user->isAllowed( 'report' ) && !$user->getBlock() &&
 		!$user->isAllowed( 'handle-reports' ) ) {
 			$links[] = self::generateReportElement( $revRecord->getID(), $userIdentity );
 		}
