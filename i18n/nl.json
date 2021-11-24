@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mainframe98"
+			"Mainframe98",
+			"Romaine"
 		]
 	},
 	"report-handling-th-timestamp": "Tijdstip",
 	"report-handling-info": "Informatie",
-	"report-handling-username": "Gebruikersnaam"
+	"report-handling-username": "Gebruikersnaam",
+	"report-reported": "gerapporteerd"
 }
