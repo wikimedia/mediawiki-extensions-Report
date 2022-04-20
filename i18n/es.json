@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"DiegoAmbrocio"
+		]
+	},
+	"action-report": "revisiones del informe",
+	"action-handle-reports": "manejar los informes",
+	"report": "Informar de una revisión",
+	"report-handling-info": "Información",
+	"report-handling-username": "Nombre de usuario",
+	"report-handling-revid": "Id. de revisión",
+	"report-handling-view-report": "Ver informe",
+	"report-report": "Informe",
+	"report-reported": "Denunciado",
+	"report-already-reported": "Ya ha informado de esta revisión.",
+	"report-submit": "Enviar informe",
+	"right-report": "Revisiones de informes para la atención de los administradores"
+}
