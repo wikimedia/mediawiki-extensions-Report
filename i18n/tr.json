@@ -6,8 +6,6 @@
 			"ahmetlii"
 		]
 	},
-	"action-report": "sürümleri bildir",
-	"action-handle-reports": "raporları kontrol et",
 	"report": "Bir sürümü bildir",
 	"report-desc": "Sürümleri, kontrol edilmesi amacıyla raporlayan [[Special:Report|özel bir sayfa]] ekler.",
 	"report-title": "Bir sürümü bildir",
@@ -44,6 +42,8 @@
 	"report-reports-awaiting-linktext": "{{PLURAL:$1|bildiri}}",
 	"report-has-been-handled": "Bildiri daha önceden kontrol edildi olarak işaretlendi.",
 	"report-submit": "Raporu gönder",
+	"action-report": "sürümleri bildir",
 	"right-report": "Sürümleri hizmetli ilgisi için rapor et",
+	"action-handle-reports": "raporları kontrol et",
 	"right-handle-reports": "Sürüm bildirimlerini kontrol et"
 }

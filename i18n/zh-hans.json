@@ -5,10 +5,10 @@
 			"铁桶"
 		]
 	},
-	"action-report": "举报修订版本",
 	"report-handling-info": "信息",
 	"report-handling-revid": "修订版本ID",
 	"report-report": "举报",
 	"report-reported": "已举报",
-	"report-submit": "提交举报"
+	"report-submit": "提交举报",
+	"action-report": "举报修订版本"
 }

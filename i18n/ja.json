@@ -6,7 +6,6 @@
 			"Omotecho"
 		]
 	},
-	"action-report": "版を報告",
 	"report": "版を報告",
 	"report-desc": "確認が必要な版を報告するための[[Special:Report|特別ページ]]を追加する",
 	"report-title": "版を報告",
@@ -43,6 +42,7 @@
 	"report-reports-awaiting-linktext": "{{PLURAL:$1|報告}}",
 	"report-has-been-handled": "この報告を確認済みとしました。",
 	"report-submit": "報告を送信する",
+	"action-report": "版を報告",
 	"right-report": "管理者に変更を報告する",
 	"right-handle-reports": "変更の報告を確認する"
 }

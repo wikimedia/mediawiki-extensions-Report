@@ -5,7 +5,6 @@
 			"Thothsum"
 		]
 	},
-	"action-handle-reports": "обрабатывать отчеты",
 	"report-error-missing-reason": "Пожалуйста, укажите причину ниже.",
 	"report-handling-title": "Обработка отчетов об изменениях",
 	"report-handled": "Обработано",
@@ -22,5 +21,6 @@
 	"report-already-reported": "Вы уже сообщили об этой редакции.",
 	"report-submit": "Отправить отчет",
 	"right-report": "Сообщить об изменениях для внимания администратора",
+	"action-handle-reports": "обрабатывать отчеты",
 	"right-handle-reports": "Обработка отчетов об изменениях"
 }

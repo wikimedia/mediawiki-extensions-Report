@@ -1,12 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"Amire80",
 			"Ken Hilton",
 			"R4356th"
 		]
 	},
-	"action-report": "The action of reporting revisions, shown in permission error messages",
-	"action-handle-reports": "String added to an error message shown on Special:HandleReports explaining the action cannot be performed when someone without permission tries to access the page",
 	"report": "Title of Special:Report as appears in Special:SpecialPages",
 	"report-desc": "{{desc|name=Report|url=https://www.mediawiki.org/wiki/Extension:Report}}",
 	"report-title": "Title of Special:Report",
@@ -43,6 +42,8 @@
 	"report-reports-awaiting-linktext": "Link text for the admin's box link leading to Special:HandleReports. $1 is the number of reports.",
 	"report-has-been-handled": "Contents of paragraph stating handling success",
 	"report-submit": "Button text for submitting a report",
-	"right-report": "Description of revision reporting user right",
-	"right-handle-reports": "Description of revision report handling user right"
+	"action-report": "{{doc-action|report}}\nThe action of reporting revisions, shown in permission error messages",
+	"right-report": "{{doc-right|report}}\nDescription of revision reporting user right",
+	"action-handle-reports": "{{doc-action|handle-reports}}\nString added to an error message shown on Special:HandleReports explaining the action cannot be performed when someone without permission tries to access the page",
+	"right-handle-reports": "{{doc-right|handle-reports}}\nDescription of revision report handling user right"
 }

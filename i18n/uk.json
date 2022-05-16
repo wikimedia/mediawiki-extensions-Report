@@ -5,8 +5,6 @@
 			"Ice bulldog"
 		]
 	},
-	"action-report": "доопрацювання звітів",
-	"action-handle-reports": "обробляти звіти",
 	"report": "Повідомити про доопрацювання",
 	"report-desc": "Додає [[Special:Report|спеціальну сторінку]] для звітування про внесені зміни для перегляду.",
 	"report-title": "Повідомити про доопрацювання",
@@ -43,6 +41,8 @@
 	"report-reports-awaiting-linktext": "{{PLURAL:$1|звіт|звітів}}",
 	"report-has-been-handled": "Звіт позначено як опрацьований.",
 	"report-submit": "Надіслати звіт",
+	"action-report": "доопрацювання звітів",
 	"right-report": "Повідомити про зміни до адміністратора",
+	"action-handle-reports": "обробляти звіти",
 	"right-handle-reports": "Обробка звітів про перегляд"
 }

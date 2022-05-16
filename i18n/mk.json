@@ -4,8 +4,6 @@
 			"Bjankuloski06"
 		]
 	},
-	"action-report": "пријавување на преработки",
-	"action-handle-reports": "постапување со пријави",
 	"report": "Пријави преработка",
 	"report-desc": "Додава [[Special:Report|службена страница]] за пријавување на преработки за преглед.",
 	"report-title": "Пријави преработка",
@@ -42,6 +40,8 @@
 	"report-reports-awaiting-linktext": "{{PLURAL:$1|пријава|пријави}}",
 	"report-has-been-handled": "Пријавата е означена како постапена.",
 	"report-submit": "Поднеси пријава",
+	"action-report": "пријавување на преработки",
 	"right-report": "Поднесување на преработки на внимание на администратор",
+	"action-handle-reports": "постапување со пријави",
 	"right-handle-reports": "Постапување со пријавени преработки"
 }

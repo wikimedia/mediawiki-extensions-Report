@@ -4,8 +4,6 @@
 			"DiegoAmbrocio"
 		]
 	},
-	"action-report": "revisiones del informe",
-	"action-handle-reports": "manejar los informes",
 	"report": "Informar de una revisión",
 	"report-handling-info": "Información",
 	"report-handling-username": "Nombre de usuario",
@@ -15,5 +13,7 @@
 	"report-reported": "Denunciado",
 	"report-already-reported": "Ya ha informado de esta revisión.",
 	"report-submit": "Enviar informe",
-	"right-report": "Revisiones de informes para la atención de los administradores"
+	"action-report": "revisiones del informe",
+	"right-report": "Revisiones de informes para la atención de los administradores",
+	"action-handle-reports": "manejar los informes"
 }

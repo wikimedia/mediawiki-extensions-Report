@@ -4,8 +4,6 @@
 			"Gomoko"
 		]
 	},
-	"action-report": "signaler des révisions",
-	"action-handle-reports": "gérer les signalements",
 	"report": "Signaler une révision",
 	"report-desc": "Ajoute une [[Special:Report|page spéciale]] pour signaler les révisions à relire.",
 	"report-title": "Signaler une révision",
@@ -42,6 +40,8 @@
 	"report-reports-awaiting-linktext": "{{PLURAL:$1|signalement|signalements}}",
 	"report-has-been-handled": "Le signalement a été marqué comme géré.",
 	"report-submit": "Soumettre le signalement",
+	"action-report": "signaler des révisions",
 	"right-report": "Signaler des révisions à l’attention de l’administrateur",
+	"action-handle-reports": "gérer les signalements",
 	"right-handle-reports": "Gérer les signalements de révision"
 }

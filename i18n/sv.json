@@ -4,8 +4,6 @@
 			"Sabelöga"
 		]
 	},
-	"action-report": "rapportera sidversioner",
-	"action-handle-reports": "hantera rapporter",
 	"report": "Rapportera en sidversion",
 	"report-desc": "Lägger till en [[Special:Report|specialsida]] för att rapportera sidversioner för granskning.",
 	"report-title": "Rapportera en sidversion",
@@ -42,6 +40,8 @@
 	"report-reports-awaiting-linktext": "{{PLURAL:$1|rapport|rapporter}}",
 	"report-has-been-handled": "Rapporten markerades som hanterad.",
 	"report-submit": "Skicka in rapport",
+	"action-report": "rapportera sidversioner",
 	"right-report": "Rapportera sidversioner till administratörernas insyn",
+	"action-handle-reports": "hantera rapporter",
 	"right-handle-reports": "Hantera sidversionsrapporter"
 }
