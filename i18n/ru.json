@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Kareyac",
+			"Pacha Tchernof",
 			"Thothsum"
 		]
 	},
@@ -21,6 +22,6 @@
 	"report-already-reported": "Вы уже сообщили об этой редакции.",
 	"report-submit": "Отправить отчет",
 	"right-report": "Сообщить об изменениях для внимания администратора",
-	"action-handle-reports": "обрабатывать отчеты",
+	"action-handle-reports": "обрабоку отчётов об изменениях",
 	"right-handle-reports": "Обработка отчетов об изменениях"
 }
