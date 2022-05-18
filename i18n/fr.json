@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Gomoko"
+			"Gomoko",
+			"Pols12"
 		]
 	},
 	"report": "Signaler une révision",
@@ -40,8 +41,8 @@
 	"report-reports-awaiting-linktext": "{{PLURAL:$1|signalement|signalements}}",
 	"report-has-been-handled": "Le signalement a été marqué comme géré.",
 	"report-submit": "Soumettre le signalement",
-	"action-report": "signaler des révisions",
+	"action-report": "signaler des révisions auprès des administrateurs",
 	"right-report": "Signaler des révisions à l’attention de l’administrateur",
-	"action-handle-reports": "gérer les signalements",
+	"action-handle-reports": "gérer les signalements de révisions",
 	"right-handle-reports": "Gérer les signalements de révision"
 }
