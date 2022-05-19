@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Ken Hilton",
-			"R4356th"
+			"R4356th",
+			"Amire80"
 		]
 	},
 	"action-report": "The action of reporting revisions, shown in permission error messages",
@@ -43,6 +44,6 @@
 	"report-reports-awaiting-linktext": "Link text for the admin's box link leading to Special:HandleReports. $1 is the number of reports.",
 	"report-has-been-handled": "Contents of paragraph stating handling success",
 	"report-submit": "Button text for submitting a report",
-	"right-report": "Description of revision reporting user right",
-	"right-handle-reports": "Description of revision report handling user right"
+	"right-report": "{{doc-right|report}}\nDescription of revision reporting user right",
+	"right-handle-reports": "{{doc-right|handle-reports}}\nDescription of revision report handling user right"
 }
