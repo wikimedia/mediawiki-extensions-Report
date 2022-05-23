@@ -3,7 +3,8 @@
 		"authors": [
 			"Ken Hilton",
 			"MathXplore",
-			"Omotecho"
+			"Omotecho",
+			"Shirayuki"
 		]
 	},
 	"report": "版を報告",
@@ -42,7 +43,7 @@
 	"report-reports-awaiting-linktext": "{{PLURAL:$1|報告}}",
 	"report-has-been-handled": "この報告を確認済みとしました。",
 	"report-submit": "報告を送信する",
-	"action-report": "管理者に版を報告",
-	"right-report": "管理者に変更を報告する",
-	"right-handle-reports": "変更の報告を確認する"
+	"action-report": "管理者への版の報告",
+	"right-report": "管理者に注意喚起するために版を報告",
+	"right-handle-reports": "変更の報告を確認"
 }
