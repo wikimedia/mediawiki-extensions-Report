@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Crowley666",
+			"GuoPC",
 			"铁桶"
 		]
 	},
@@ -10,5 +11,5 @@
 	"report-report": "举报",
 	"report-reported": "已举报",
 	"report-submit": "提交举报",
-	"action-report": "举报修订版本"
+	"action-report": "报告修订版本以引起管理员注意"
 }
