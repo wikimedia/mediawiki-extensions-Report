@@ -1,7 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Gomoko"
+			"Gomoko",
+			"Pols12",
+			"Verdy p"
 		]
 	},
 	"action-report": "signaler des révisions",
@@ -22,7 +24,7 @@
 	"report-handling-th-user": "Utilisateur signalant",
 	"report-handling-th-revid": "ID de la révision signalée",
 	"report-handling-th-timestamp": "Horodatage",
-	"report-handling-info": "Information",
+	"report-handling-info": "Informations",
 	"report-handling-username": "Nom d’utilisateur",
 	"report-handling-revid": "ID de révision",
 	"report-handling-view-report": "Afficher le signalement",
