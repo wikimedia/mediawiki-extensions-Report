@@ -3,11 +3,21 @@
 		"authors": [
 			"Crowley666",
 			"GuoPC",
+			"StarrySky",
 			"铁桶"
 		]
 	},
+	"report": "举报一个版本",
+	"report-desc": "添加一个[[Special:Report|特殊页面]]以供举报版本。",
+	"report-title": "举报一个版本",
+	"report-intro": "请填写举报$1版本的原因",
+	"report-error-invalid-revid": "错误：不明版本ID$1",
+	"report-handling-th-timestamp": "时间戳",
 	"report-handling-info": "信息",
+	"report-handling-username": "用户名",
 	"report-handling-revid": "修订版本ID",
+	"report-handling-view-report": "查看举报",
+	"report-handling": "处理",
 	"report-report": "举报",
 	"report-reported": "已举报",
 	"report-submit": "提交举报",
