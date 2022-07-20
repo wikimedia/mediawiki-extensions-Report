@@ -42,7 +42,7 @@
 	"report-already-reported": "Vous avez déjà signalé cette révision.",
 	"report-reports-awaiting": "<b>$2</b> $1 non géré {{PLURAL:$2|attend|attendent}}. <b>Votre attention est réclamée !</b>",
 	"report-reports-awaiting-linktext": "{{PLURAL:$1|signalement|signalements}}",
-	"report-has-been-handled": "Le signalement a été marqué comme géré.",
+	"report-has-been-handled": "Le rapport a été marqué comme géré.",
 	"report-submit": "Soumettre le signalement",
 	"right-report": "Signaler des révisions à l’attention de l’administrateur",
 	"right-handle-reports": "Gérer les signalements de révision"
