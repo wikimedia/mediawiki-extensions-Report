@@ -40,7 +40,7 @@
 	"report-report": "signaler",
 	"report-reported": "signalé",
 	"report-already-reported": "Vous avez déjà signalé cette révision.",
-	"report-reports-awaiting": "<b>$2</b> $1 non géré {{PLURAL:$2|attend|attendent}}. <b>Votre attention est réclamée !</b>",
+	"report-reports-awaiting": "<b>$2</b> $1 non géré{{PLURAL:$2||s}} {{PLURAL:$2|es|son}}t en attente. <b>Votre attention est nécessaire !</b>",
 	"report-reports-awaiting-linktext": "{{PLURAL:$1|signalement|signalements}}",
 	"report-has-been-handled": "Le rapport a été marqué comme géré.",
 	"report-submit": "Soumettre le signalement",
