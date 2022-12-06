@@ -11,7 +11,7 @@
 	"report-title": "Signaler une révision",
 	"report-intro": "Veuillez saisir un motif pour signaler la révision $1 :",
 	"report-error-invalid-revid": "Erreur : identifiant de révision non valide : $1",
-	"report-error-invalid-repid": "Erreur : ID de signalement non valide : $1",
+	"report-error-invalid-repid": "Erreur : identifiant du signalement non valide : $1",
 	"report-error-missing-reason": "Veuillez saisir un motif ci-dessous.",
 	"report-success": "La révision a été signalée.",
 	"report-handling-title": "Gérer les signalements de révision",
