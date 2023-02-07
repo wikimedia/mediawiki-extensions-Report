@@ -1,10 +1,48 @@
 {
 	"@metadata": {
 		"authors": [
-			"Zabe"
+			"Zabe",
+			"Justman10000"
 		]
 	},
+	"report": "Eine Revision melden",
+	"report-desc": "Fügt eine [[Special:Report|Spezialseite]] hinzu, um Revisionen zur Überprüfung zu melden.",
+	"report-title": "Eine Revision melden",
+	"report-intro": "Bitte gib einen Grund für die Meldung der Revision an $1:",
+	"report-error-invalid-revid": "Fehler: Ungültige Revisions-ID: $1",
+	"report-error-invalid-repid": "Fehler: Ungültige Meldungs-ID: $1",
+	"report-error-missing-reason": "Bitte gib unten einen Grund an.",
+	"report-success": "Die Überarbeitung wurde gemeldet.",
+	"report-handling-title": "Revisionsmeldungen behandeln",
+	"report-error-missing-perms": "Fehler: Du verfügst nicht über die Berechtigung 'handle-reports'.",
+	"report-handled": "Behandelt",
+	"handlereports": "Bearbeitung von Revisionsmeldungen",
+	"report-handling-th-reason": "Grund der Meldung",
+	"report-handling-th-user": "Benutzer melden",
+	"report-handling-th-revid": "Gemeldete Revisions-ID",
 	"report-handling-th-timestamp": "Zeitstempel",
 	"report-handling-info": "Information",
-	"report-handling-username": "Benutzername"
+	"report-handling-username": "Benutzername",
+	"report-handling-revid": "Revision-ID",
+	"report-handling-view-report": "Meldung ansehen",
+	"report-handling": "Behandlung",
+	"report-handling-mark-handled": "Als erledigt markieren",
+	"report-handling-handledq": "Erledigt?",
+	"report-handling-handled-by": "Erledigt von",
+	"report-handling-view-handled": "Behandelte Meldungen ansehen",
+	"report-handling-view-nothandled": "Unbehandelte Meldungen anzeigen",
+	"report-handling-handled": "Behandelt",
+	"report-handling-nothandled": "Nicht behandelt",
+	"report-handling-no-reports": "Es existieren keine Meldungen.",
+	"report-report": "Meldung",
+	"report-reported": "Gemeldet",
+	"report-already-reported": "Du hast diese Überarbeitung bereits gemeldet.",
+	"report-reports-awaiting": "<b>$2</b> unbehandelte $1 {{PLURAL:$2|ist|sind}} warten. <b>Deine Aufmerksamkeit ist gefragt!</b>",
+	"report-reports-awaiting-linktext": "{{PLURAL:$1|Meldung|Meldungen}}",
+	"report-has-been-handled": "Die Meldung wurde als bearbeitet markiert.",
+	"report-submit": "Meldung einreichen",
+	"action-report": "Überarbeitungen der Meldung an den Administrator",
+	"right-report": "Überarbeitung der Meldung für den Administrator",
+	"action-handle-reports": "Revisionsmeldungen bearbeiten",
+	"right-handle-reports": "Bearbeitung von Revisionsmeldungen"
 }
