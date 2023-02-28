@@ -4,7 +4,8 @@
 			"Ken Hilton",
 			"MathXplore",
 			"Omotecho",
-			"Shirayuki"
+			"Shirayuki",
+			"春春眠眠"
 		]
 	},
 	"report": "版を報告",
@@ -39,11 +40,12 @@
 	"report-report": "報告",
 	"report-reported": "報告されました",
 	"report-already-reported": "この版はすでに報告されています",
-	"report-reports-awaiting": "d<b>$2</b>個の$1{{PLURAL:$2|が}}確認待ちです。<b>ご対応お願いします!</b>",
+	"report-reports-awaiting": "<b>$2</b>個の$1{{PLURAL:$2|が}}確認待ちです。<b>ご対応お願いします!</b>",
 	"report-reports-awaiting-linktext": "{{PLURAL:$1|報告}}",
 	"report-has-been-handled": "この報告を確認済みとしました。",
 	"report-submit": "報告を送信する",
 	"action-report": "管理者への版の報告",
 	"right-report": "管理者に注意喚起するために版を報告",
+	"action-handle-reports": "報告された版の確認",
 	"right-handle-reports": "変更の報告を確認"
 }
