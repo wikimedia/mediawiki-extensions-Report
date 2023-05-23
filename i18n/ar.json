@@ -1,9 +1,47 @@
 {
 	"@metadata": {
 		"authors": [
-			"Asma"
+			"Asma",
+			"Alshamiri1"
 		]
 	},
+	"report": "الإبلاغ عن مراجعة",
+	"report-desc": "يضيف [[Special: Report | صفحة خاصة]] للإبلاغ عن المراجعات للمراجعة.",
+	"report-title": "الإبلاغ عن مراجعة",
+	"report-intro": "يرجى ملء سبب الإبلاغ عن المراجعة $1 :",
+	"report-error-invalid-revid": "خطأ: معرف المراجعة غير صالح: $1",
+	"report-error-invalid-repid": "خطأ: معرّف التقرير غير صالح: $1",
+	"report-error-missing-reason": "يرجى ملء السبب أدناه.",
+	"report-success": "تم الإبلاغ عن التنقيح.",
+	"report-handling-title": "التعامل مع تقارير المراجعة",
+	"report-error-missing-perms": "خطأ: ليس لديك إذن \"تقارير المعالج\".",
+	"report-handled": "تم التعامل معها",
+	"handlereports": "التعامل مع تقارير المراجعة",
+	"report-handling-th-reason": "تقرير السبب",
+	"report-handling-th-user": "تبليغ عن مستخدم",
+	"report-handling-th-revid": "معرّف المراجعة المبلغ عنها",
+	"report-handling-th-timestamp": "الطابع الزمني",
+	"report-handling-info": "معلومات",
+	"report-handling-username": "اسم المستخدم",
+	"report-handling-revid": "معرف المراجعة",
+	"report-handling-view-report": "عرض التقرير",
+	"report-handling": "معالجة",
+	"report-handling-mark-handled": "وضع علامة تم التعامل معها",
+	"report-handling-handledq": "تم التعامل معها؟",
+	"report-handling-view-handled": "عرض التقارير التي تم التعامل معها",
+	"report-handling-view-nothandled": "عرض التقارير التي لم تتم معالجتها",
+	"report-handling-handled": "تم التعامل معها",
+	"report-handling-nothandled": "لم يتم التعامل معها",
+	"report-handling-no-reports": "لا توجد تقارير.",
+	"report-report": "تقرير",
+	"report-reported": "تم الإبلاغ",
+	"report-already-reported": "لقد أبلغت بالفعل عن هذه المراجعة.",
+	"report-reports-awaiting": "<b>$2</b> غير مُدار $1 {{PLURAL:$2| هو | هي}} في انتظار. <b>انتباهك مطلوب!</b>",
+	"report-reports-awaiting-linktext": "{{PLURAL:$1| تقرير | تقارير}}",
+	"report-has-been-handled": "تم وضع علامة على التقرير على أنه تمت معالجته.",
+	"report-submit": "إرسال التقرير",
 	"action-report": "تقرير المراجعات لاهتمام المسؤول",
-	"action-handle-reports": "التعامل مع تقارير المراجعة"
+	"right-report": "تقرير المراجعات لاهتمام المشرف",
+	"action-handle-reports": "التعامل مع تقارير المراجعة",
+	"right-handle-reports": "التعامل مع تقارير المراجعة"
 }
