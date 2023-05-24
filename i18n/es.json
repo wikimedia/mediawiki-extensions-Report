@@ -1,12 +1,21 @@
 {
 	"@metadata": {
 		"authors": [
-			"DiegoAmbrocio"
+			"DiegoAmbrocio",
+			"No se"
 		]
 	},
 	"action-report": "revisiones del informe",
 	"action-handle-reports": "manejar los informes",
 	"report": "Informar de una revisión",
+	"report-desc": "añade una [[Special:Report|página especial]] para informar las revisiones para su revisión.",
+	"report-title": "Reportar una revisión",
+	"report-intro": "Por favor indique un motivo para informar la revisión $1:",
+	"report-error-invalid-revid": "Error: ID de revisión inválida: $1",
+	"report-error-invalid-repid": "Error: ID de informe inválido: $1",
+	"report-error-missing-reason": "Por favor, complete un motivo a continuación.",
+	"report-success": "La revisión ha sido informada.",
+	"report-handling-title": "Manejar informes de revisión",
 	"report-handling-info": "Información",
 	"report-handling-username": "Nombre de usuario",
 	"report-handling-revid": "Id. de revisión",
