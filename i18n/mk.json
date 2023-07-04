@@ -40,8 +40,8 @@
 	"report-reports-awaiting-linktext": "{{PLURAL:$1|пријава|пријави}}",
 	"report-has-been-handled": "Пријавата е означена како постапена.",
 	"report-submit": "Поднеси пријава",
-	"action-report": "пријавување на преработки",
+	"action-report": "пријавување на преработки кај администратори",
 	"right-report": "Поднесување на преработки на внимание на администратор",
-	"action-handle-reports": "постапување со пријави",
+	"action-handle-reports": "постапување со пријавени преработки",
 	"right-handle-reports": "Постапување со пријавени преработки"
 }
