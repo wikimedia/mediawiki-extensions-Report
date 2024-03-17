@@ -21,7 +21,7 @@ class HandleReportsPager extends ReverseChronologicalPager {
 
 	/** @inheritDoc */
 	public function getQueryInfo() {
-		 return [
+		return [
 			'tables' => 'report_reports',
 			'fields' => [
 				'report_id',
