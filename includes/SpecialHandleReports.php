@@ -25,7 +25,7 @@ class SpecialHandleReports extends SpecialPage {
 			$this->displayRestrictionError();
 			return;
 		}
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		if ( !ctype_digit( $par ) ) {
 			$handled = ( strtolower( wfMessage( 'report-handled' )->text() )
 				=== strtolower( $par ) );
@@ -95,7 +95,8 @@ class SpecialHandleReports extends SpecialPage {
 	 * @return void
 	 */
 	public function showReport( $par, $out, $user ) {
-		$userFactory = MediaWikiServices::getInstance()->getUserFactory();
+		$services = MediaWikiServices::getInstance();
+		$userFactory = $services->getUserFactory();
 
 		if ( $this->getRequest()->wasPosted() ) {
 			return $this->onPost( $par, $out, $user );
@@ -114,7 +115,7 @@ class SpecialHandleReports extends SpecialPage {
 			'report-handling-handled-by',
 			'report-handling-th-timestamp'
 		];
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = $services->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		if ( $query = $dbr->selectRow(
 			'report_reports',
 			$dbcols,
@@ -275,7 +276,7 @@ class SpecialHandleReports extends SpecialPage {
 	 */
 	public function onPost( $par, $out, $user ) {
 		if ( $user->matchEditToken( $this->getRequest()->getText( 'token' ) ) ) {
-			$dbw = wfGetDB( DB_MASTER );
+			$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
 			$dbw->startAtomic( __METHOD__ );
 			$dbw->update( 'report_reports', [
 				'report_handled' => 1,

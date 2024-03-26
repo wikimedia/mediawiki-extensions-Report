@@ -40,7 +40,7 @@ class ReportHooks {
 	 * @return string
 	 */
 	protected static function generateReportElement( $id, $user ) {
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		if ( $dbr->selectRow( 'report_reports', [ 'report_id' ], [
 			'report_revid' => $id,
 			'report_user' => $user->getId()
@@ -75,7 +75,7 @@ class ReportHooks {
 		if ( !( $title->isSpecial( 'Recentchanges' ) || $title->isSpecial( 'Watchlist' ) ) ) {
 			return true;
 		}
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		if ( ( $count = $dbr->selectRowCount( 'report_reports', '*', [
 			'report_handled != 1',
 		], __METHOD__ ) ) > 0 ) {

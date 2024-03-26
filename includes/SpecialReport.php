@@ -42,12 +42,13 @@ class SpecialReport extends SpecialPage {
 			$this->showError( 'report-error-invalid-revid', $par );
 			return;
 		}
-		$rev = MediaWikiServices::getInstance()->getRevisionLookup()->getRevisionById( (int)$par );
+		$services = MediaWikiServices::getInstance();
+		$rev = $services->getRevisionLookup()->getRevisionById( (int)$par );
 		if ( !$rev ) {
 			$this->showError( 'report-error-invalid-revid', $par );
 			return;
 		}
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = $services->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		if ( $dbr->selectRow( 'report_reports', [ 'report_id' ], [
 			'report_revid' => $rev->getId(),
 			'report_user' => $user->getId()
@@ -91,7 +92,7 @@ class SpecialReport extends SpecialPage {
 			) );
 			return;
 		}
-		$dbw = wfGetDB( DB_MASTER );
+		$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
 		$dbw->startAtomic( __METHOD__ );
 		$dbw->insert( 'report_reports', [
 			'report_revid' => (int)$par,
