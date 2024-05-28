@@ -14,6 +14,7 @@
 	"report-error-missing-reason": "Por favor, complete un motivo a continuación.",
 	"report-success": "La revisión ha sido informada.",
 	"report-handling-title": "Manejar informes de revisión",
+	"handlereports": "Manejar informes de revisión",
 	"report-handling-th-reason": "Razón de informe",
 	"report-handling-info": "Información",
 	"report-handling-username": "Nombre de usuario",
@@ -30,5 +31,6 @@
 	"report-submit": "Enviar informe",
 	"action-report": "revisiones del informe",
 	"right-report": "Revisiones de informes para la atención de los administradores",
-	"action-handle-reports": "manejar los informes"
+	"action-handle-reports": "manejar informes de revisión",
+	"right-handle-reports": "Manejar informes de revisión"
 }
