@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"Constraque",
 			"Gramo6"
 		]
 	},
 	"report-handling-info": "Інформація",
-	"report-handling-username": "Имня хосновача",
+	"report-handling-username": "Мено хоснователя",
 	"report-handling-revid": "ID Ревізії"
 }
