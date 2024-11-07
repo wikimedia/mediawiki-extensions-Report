@@ -2,11 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Alshamiri1",
-			"Asma"
+			"Asma",
+			"Meno25"
 		]
 	},
 	"report": "الإبلاغ عن مراجعة",
-	"report-desc": "يضيف [[Special: Report | صفحة خاصة]] للإبلاغ عن المراجعات للمراجعة.",
+	"report-desc": "يضيف [[Special:Report|صفحة خاصة]] للإبلاغ عن المراجعات للمراجعة.",
 	"report-title": "الإبلاغ عن مراجعة",
 	"report-intro": "يرجى ملء سبب الإبلاغ عن المراجعة $1 :",
 	"report-error-invalid-revid": "خطأ: معرف المراجعة غير صالح: $1",
