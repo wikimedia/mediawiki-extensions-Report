@@ -29,6 +29,7 @@
 	"report-handling": "معالجة",
 	"report-handling-mark-handled": "وضع علامة تم التعامل معها",
 	"report-handling-handledq": "تم التعامل معها؟",
+	"report-handling-handled-by": "تم التعامل معه بواسطة",
 	"report-handling-view-handled": "عرض التقارير التي تم التعامل معها",
 	"report-handling-view-nothandled": "عرض التقارير التي لم تتم معالجتها",
 	"report-handling-handled": "تم التعامل معها",
