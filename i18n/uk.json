@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"DDPAT",
-			"Ice bulldog"
+			"Ice bulldog",
+			"Ата"
 		]
 	},
 	"report": "Повідомити про доопрацювання",
@@ -41,8 +42,8 @@
 	"report-reports-awaiting-linktext": "{{PLURAL:$1|звіт|звітів}}",
 	"report-has-been-handled": "Звіт позначено як опрацьований.",
 	"report-submit": "Надіслати звіт",
-	"action-report": "доопрацювання звітів",
+	"action-report": "доведення змін до відома адміністратора",
 	"right-report": "Повідомити про зміни до адміністратора",
-	"action-handle-reports": "обробляти звіти",
+	"action-handle-reports": "обробку звітів про зміни",
 	"right-handle-reports": "Обробка звітів про перегляд"
 }
