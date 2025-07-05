@@ -1,7 +1,7 @@
 <?php
 namespace MediaWiki\Extension\Report;
 
-use Html;
+use MediaWiki\Html\Html;
 use MediaWiki\MediaWikiServices;
 use ReverseChronologicalPager;
 use SpecialPage;

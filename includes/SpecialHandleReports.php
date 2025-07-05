@@ -1,9 +1,11 @@
 <?php
 namespace MediaWiki\Extension\Report;
 
-use Html;
+use MediaWiki\Html\Html;
 use MediaWiki\MediaWikiServices;
+use OutputPage;
 use SpecialPage;
+use User;
 
 class SpecialHandleReports extends SpecialPage {
 
