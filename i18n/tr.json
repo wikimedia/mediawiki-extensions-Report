@@ -42,8 +42,8 @@
 	"report-reports-awaiting-linktext": "{{PLURAL:$1|bildiri}}",
 	"report-has-been-handled": "Bildiri daha önceden kontrol edildi olarak işaretlendi.",
 	"report-submit": "Raporu gönder",
-	"action-report": "sürümleri bildir",
+	"action-report": "hizmetli dikkatine sunulmak üzere revizyonları bildirme",
 	"right-report": "Sürümleri hizmetli ilgisi için rapor et",
-	"action-handle-reports": "raporları kontrol et",
+	"action-handle-reports": "revizyon raporları kontrol etme",
 	"right-handle-reports": "Sürüm bildirimlerini kontrol et"
 }
