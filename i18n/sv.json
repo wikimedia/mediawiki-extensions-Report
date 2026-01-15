@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Sabelöga"
+			"Sabelöga",
+			"Stefan2255"
 		]
 	},
 	"report": "Rapportera en sidversion",
@@ -40,7 +41,7 @@
 	"report-reports-awaiting-linktext": "{{PLURAL:$1|rapport|rapporter}}",
 	"report-has-been-handled": "Rapporten markerades som hanterad.",
 	"report-submit": "Skicka in rapport",
-	"action-report": "rapportera sidversioner",
+	"action-report": "rapportera revisioner för administratörens uppmärksamhet",
 	"right-report": "Rapportera sidversioner till administratörernas insyn",
 	"action-handle-reports": "hantera rapporter",
 	"right-handle-reports": "Hantera sidversionsrapporter"
