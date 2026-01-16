@@ -43,6 +43,6 @@
 	"report-submit": "Skicka in rapport",
 	"action-report": "rapportera revisioner för administratörens uppmärksamhet",
 	"right-report": "Rapportera sidversioner till administratörernas insyn",
-	"action-handle-reports": "hantera rapporter",
+	"action-handle-reports": "hantera revisionsrapporter",
 	"right-handle-reports": "Hantera sidversionsrapporter"
 }
