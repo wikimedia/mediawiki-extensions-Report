@@ -10,7 +10,12 @@ use User;
 class SpecialHandleReports extends SpecialPage {
 
 	public function __construct() {
-		parent::__construct( 'HandleReports', 'handle-reports' );
+		parent::__construct( 'HandleReports' );
+	}
+
+	/** @inheritDoc */
+	public function getRestriction(): string {
+		return 'handle-reports';
 	}
 
 	/**
