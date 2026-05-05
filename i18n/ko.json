@@ -2,23 +2,34 @@
 	"@metadata": {
 		"authors": [
 			"Apzp79",
-			"Ykhwong"
+			"Ykhwong",
+			"Tensama0415"
 		]
 	},
+	"report": "판 보고",
+	"report-title": "판 보고",
 	"report-error-missing-reason": "아래에 이유를 기입해 주십시오.",
 	"report-handled": "처리됨",
+	"report-handling-th-reason": "보고 이유",
 	"report-handling-th-user": "사용자 신고",
+	"report-handling-th-revid": "보고된 판 ID",
 	"report-handling-th-timestamp": "타임스탬프",
 	"report-handling-info": "정보",
 	"report-handling-username": "사용자 이름",
 	"report-handling-revid": "판 ID",
+	"report-handling-view-report": "보고 보기",
+	"report-handling": "처리",
 	"report-handling-mark-handled": "처리됨으로 표시",
-	"report-handling-handledq": "처리?",
+	"report-handling-handledq": "처리되었는지",
+	"report-handling-view-handled": "처리된 보고서 보기",
+	"report-handling-view-nothandled": "처리되지 않은 보고서 보기",
 	"report-handling-handled": "처리됨",
 	"report-handling-nothandled": "처리되지 않음",
 	"report-handling-no-reports": "보고서가 없습니다.",
 	"report-report": "보고",
 	"report-reported": "보고됨",
 	"report-reports-awaiting-linktext": "{{PLURAL:$1|보고서}}",
-	"report-submit": "보고서 제출"
+	"report-submit": "보고서 제출",
+	"action-handle-reports": "판 보고서를 처리할",
+	"right-handle-reports": "판 보고서 처리"
 }
