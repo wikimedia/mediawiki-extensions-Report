@@ -4,15 +4,16 @@
 			"Ciell",
 			"Mainframe98",
 			"McDutchie",
-			"Romaine"
+			"Romaine",
+			"Siebrand"
 		]
 	},
 	"report": "Een versie melden",
 	"report-desc": "Voegt een [[Special:Report|speciale pagina]] toe om versies ter beoordeling te melden.",
 	"report-title": "Een versie melden",
 	"report-intro": "Vul een reden in voor het melden van versienummer $1:",
-	"report-error-invalid-revid": "Fout: Ongeldig versienummer: $1",
-	"report-error-invalid-repid": "Fout: Ongeldig meldingsnummer: $1",
+	"report-error-invalid-revid": "Fout: Onjuist versienummer: $1",
+	"report-error-invalid-repid": "Fout: Onjuist meldingsnummer: $1",
 	"report-error-missing-reason": "Vul hieronder een reden in.",
 	"report-success": "De versie is gemeld.",
 	"report-handling-title": "Versiemeldingen afhandelen",
