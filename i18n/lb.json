@@ -4,5 +4,6 @@
 			"Volvox"
 		]
 	},
+	"report-error-invalid-revid": "Feeler: Ongülteg Versiouns-ID: $1",
 	"report-handling-username": "Benotzernumm"
 }
