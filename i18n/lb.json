@@ -5,5 +5,6 @@
 		]
 	},
 	"report-error-invalid-revid": "Feeler: Ongülteg Versiouns-ID: $1",
-	"report-handling-username": "Benotzernumm"
+	"report-handling-username": "Benotzernumm",
+	"report-handling-revid": "Versiouns-ID"
 }
