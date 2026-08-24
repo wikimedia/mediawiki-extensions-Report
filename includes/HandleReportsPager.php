@@ -8,15 +8,9 @@ use SpecialPage;
 use stdClass;
 
 class HandleReportsPager extends ReverseChronologicalPager {
-	/** @var array */
-	private $conds;
-
-	/**
-	 * @param array $conds
-	 */
-	public function __construct( $conds ) {
-		$this->conds = $conds;
-
+	public function __construct(
+		private readonly array $conds,
+	) {
 		parent::__construct();
 	}
 
