@@ -2,15 +2,19 @@
 namespace MediaWiki\Extension\Report;
 
 use MediaWiki\Html\Html;
-use MediaWiki\MediaWikiServices;
+use MediaWiki\Revision\RevisionLookup;
 use OutputPage;
 use SpecialPage;
 use User;
 use WebRequest;
+use Wikimedia\Rdbms\IConnectionProvider;
 
 class SpecialReport extends SpecialPage {
 
-	public function __construct() {
+	public function __construct(
+		private readonly IConnectionProvider $dbProvider,
+		private readonly RevisionLookup $revisionLookup,
+	) {
 		parent::__construct( 'Report' );
 	}
 
@@ -45,13 +49,12 @@ class SpecialReport extends SpecialPage {
 			$this->showError( 'report-error-invalid-revid', $par );
 			return;
 		}
-		$services = MediaWikiServices::getInstance();
-		$rev = $services->getRevisionLookup()->getRevisionById( (int)$par );
+		$rev = $this->revisionLookup->getRevisionById( (int)$par );
 		if ( !$rev ) {
 			$this->showError( 'report-error-invalid-revid', $par );
 			return;
 		}
-		$dbr = $services->getDBLoadBalancer()->getConnection( DB_REPLICA );
+		$dbr = $this->dbProvider->getReplicaDatabase();
 		if ( $dbr->selectRow( 'report_reports', [ 'report_id' ], [
 			'report_revid' => $rev->getId(),
 			'report_user' => $user->getId()
@@ -61,7 +64,7 @@ class SpecialReport extends SpecialPage {
 		}
 		$request = $this->getRequest();
 		if ( $request->wasPosted() ) {
-			return self::onPost( $par, $out, $request, $user );
+			return $this->onPost( $par, $out, $request, $user );
 		}
 		$out->setIndexPolicy( 'noindex' );
 		$out->addWikiMsg( 'report-intro', $par );
@@ -83,7 +86,7 @@ class SpecialReport extends SpecialPage {
 	 * @param WebRequest $request
 	 * @param User $user
 	 */
-	public static function onPost( $par, $out, $request, $user ) {
+	public function onPost( $par, $out, $request, $user ) {
 		if ( !$user->matchEditToken( $request->getText( 'token' ) ) ) {
 			$out->addWikiMsg( 'sessionfailure' );
 			return;
@@ -95,7 +98,7 @@ class SpecialReport extends SpecialPage {
 			) );
 			return;
 		}
-		$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
+		$dbw = $this->dbProvider->getPrimaryDatabase();
 		$dbw->startAtomic( __METHOD__ );
 		$dbw->insert( 'report_reports', [
 			'report_revid' => (int)$par,

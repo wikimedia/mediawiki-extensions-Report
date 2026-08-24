@@ -2,14 +2,18 @@
 namespace MediaWiki\Extension\Report;
 
 use MediaWiki\Html\Html;
-use MediaWiki\MediaWikiServices;
+use MediaWiki\User\UserFactory;
 use OutputPage;
 use SpecialPage;
 use User;
+use Wikimedia\Rdbms\IConnectionProvider;
 
 class SpecialHandleReports extends SpecialPage {
 
-	public function __construct() {
+	public function __construct(
+		private readonly IConnectionProvider $dbProvider,
+		private readonly UserFactory $userFactory,
+	) {
 		parent::__construct( 'HandleReports' );
 	}
 
@@ -31,7 +35,7 @@ class SpecialHandleReports extends SpecialPage {
 		if ( !$this->userCanExecute( $user ) ) {
 			$this->displayRestrictionError();
 		}
-		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
+		$dbr = $this->dbProvider->getReplicaDatabase();
 		if ( !ctype_digit( $par ) ) {
 			$handled = ( strtolower( wfMessage( 'report-handled' )->text() )
 				=== strtolower( $par ) );
@@ -62,7 +66,7 @@ class SpecialHandleReports extends SpecialPage {
 			wfMessage( $key )->text()
 		) ) );
 
-		$pager = new HandleReportsPager( $conds );
+		$pager = new HandleReportsPager( $conds, $this->userFactory );
 
 		if ( $pager->getNumRows() > 0 ) {
 			$out->addHtml( Html::rawElement( 'div', [], $pager->getNavigationBar() ) );
@@ -101,9 +105,6 @@ class SpecialHandleReports extends SpecialPage {
 	 * @return void
 	 */
 	public function showReport( $par, $out, $user ) {
-		$services = MediaWikiServices::getInstance();
-		$userFactory = $services->getUserFactory();
-
 		if ( $this->getRequest()->wasPosted() ) {
 			$this->onPost( $par, $out, $user );
 			return;
@@ -122,7 +123,7 @@ class SpecialHandleReports extends SpecialPage {
 			'report-handling-handled-by',
 			'report-handling-th-timestamp'
 		];
-		$dbr = $services->getDBLoadBalancer()->getConnection( DB_REPLICA );
+		$dbr = $this->dbProvider->getReplicaDatabase();
 		if ( $query = $dbr->selectRow(
 			'report_reports',
 			$dbcols,
@@ -146,7 +147,7 @@ class SpecialHandleReports extends SpecialPage {
 				[ 'readonly' => '', 'class' => 'mw-report-handling-textarea' ],
 				$query->report_reason
 			) );
-			$reporter = $userFactory->newFromId( $query->report_user );
+			$reporter = $this->userFactory->newFromId( $query->report_user );
 			$out->addHTML( Html::closeElement( 'fieldset' ) );
 
 			// Report information display
@@ -239,7 +240,7 @@ class SpecialHandleReports extends SpecialPage {
 			// Handler
 			$out->addHTML( Html::openElement( 'td' ) );
 			if ( $query->report_handled ) {
-				$handledby = $userFactory->newFromId( $query->report_handled_by );
+				$handledby = $this->userFactory->newFromId( $query->report_handled_by );
 				$out->addHTML( Html::element(
 					'a',
 					[
@@ -283,7 +284,7 @@ class SpecialHandleReports extends SpecialPage {
 	 */
 	public function onPost( $par, $out, $user ) {
 		if ( $user->matchEditToken( $this->getRequest()->getText( 'token' ) ) ) {
-			$dbw = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_PRIMARY );
+			$dbw = $this->dbProvider->getPrimaryDatabase();
 			$dbw->startAtomic( __METHOD__ );
 			$dbw->update( 'report_reports', [
 				'report_handled' => 1,

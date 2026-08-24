@@ -15,8 +15,20 @@
 		"handle-reports"
 	],
 	"SpecialPages": {
-		"Report": "MediaWiki\\Extension\\Report\\SpecialReport",
-		"HandleReports": "MediaWiki\\Extension\\Report\\SpecialHandleReports"
+		"Report": {
+			"class": "MediaWiki\\Extension\\Report\\SpecialReport",
+			"services": [
+				"ConnectionProvider",
+				"RevisionLookup"
+			]
+		},
+		"HandleReports": {
+			"class": "MediaWiki\\Extension\\Report\\SpecialHandleReports",
+			"services": [
+				"ConnectionProvider",
+				"UserFactory"
+			]
+		}
 	},
 	"Hooks": {
 		"LoadExtensionSchemaUpdates": "MediaWiki\\Extension\\Report\\ReportHooks::onLoadExtensionSchemaUpdates",

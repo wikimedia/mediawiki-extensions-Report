@@ -2,7 +2,7 @@
 namespace MediaWiki\Extension\Report;
 
 use MediaWiki\Html\Html;
-use MediaWiki\MediaWikiServices;
+use MediaWiki\User\UserFactory;
 use ReverseChronologicalPager;
 use SpecialPage;
 use stdClass;
@@ -10,6 +10,7 @@ use stdClass;
 class HandleReportsPager extends ReverseChronologicalPager {
 	public function __construct(
 		private readonly array $conds,
+		private readonly UserFactory $userFactory,
 	) {
 		parent::__construct();
 	}
@@ -52,7 +53,7 @@ class HandleReportsPager extends ReverseChronologicalPager {
 			],
 			$row->report_reason
 		) );
-		$user = MediaWikiServices::getInstance()->getUserFactory()->newFromId( $row->report_user );
+		$user = $this->userFactory->newFromId( $row->report_user );
 		$out .= Html::rawElement( 'td', [], Html::element(
 			'a',
 			[
