@@ -10,13 +10,18 @@ use MediaWiki\Skin\Skin;
 use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\User\UserIdentity;
 
-class ReportHooks {
+class ReportHooks implements
+	\MediaWiki\Actions\Hook\HistoryToolsHook,
+	\MediaWiki\Diff\Hook\DiffToolsHook,
+	\MediaWiki\Installer\Hook\LoadExtensionSchemaUpdatesHook,
+	\MediaWiki\Output\Hook\BeforePageDisplayHook
+{
 
 	/**
 	 * @param DatabaseUpdater $updater
 	 * @return bool
 	 */
-	public static function onLoadExtensionSchemaUpdates( $updater ) {
+	public function onLoadExtensionSchemaUpdates( $updater ) {
 		$sql_dir = dirname( __DIR__ ) . '/sql';
 		$updater->addExtensionTable(
 			'report_reports',
@@ -27,15 +32,32 @@ class ReportHooks {
 
 	/**
 	 * @param RevisionRecord $revRecord
-	 * @param array &$links
-	 * @param RevisionRecord|null $oldRevRecord
-	 * @param UserIdentity $userIdentity
+	 * @param string[] &$links Array of HTML links#
+	 * @param RevisionRecord|null $prevRevRecord RevisionRecord object, next in line
+	 *   in page history, or null
+	 * @param UserIdentity $userIdentity Current user
+	 * @return bool|void True or no return value to continue or false to abort
 	 */
-	public static function insertReportLink( $revRecord, &$links, $oldRevRecord, $userIdentity ) {
+	public function onHistoryTools( $revRecord, &$links, $prevRevRecord, $userIdentity ) {
+		return $this->insertReportLink( $revRecord, $links, $userIdentity );
+	}
+
+	/**
+	 * @param RevisionRecord $newRevRecord New revision
+	 * @param string[] &$links Array of HTML links
+	 * @param RevisionRecord|null $oldRevRecord Old revision (may be null)
+	 * @param UserIdentity $userIdentity Current user
+	 * @return bool|void True or no return value to continue or false to abort
+	 */
+	public function onDiffTools( $newRevRecord, &$links, $oldRevRecord, $userIdentity ) {
+		return $this->insertReportLink( $newRevRecord, $links, $userIdentity );
+	}
+
+	private function insertReportLink( RevisionRecord $revRecord, array &$links, UserIdentity $userIdentity ) {
 		$user = MediaWikiServices::getInstance()->getUserFactory()->newFromUserIdentity( $userIdentity );
 		if ( $user->isAllowed( 'report' ) && !$user->getBlock() &&
 		!$user->isAllowed( 'handle-reports' ) ) {
-			$links[] = self::generateReportElement( $revRecord->getID(), $userIdentity );
+			$links[] = $this->generateReportElement( $revRecord->getID(), $userIdentity );
 		}
 	}
 
@@ -44,7 +66,7 @@ class ReportHooks {
 	 * @param UserIdentity $userIdentity
 	 * @return string
 	 */
-	protected static function generateReportElement( $id, $userIdentity ) {
+	private function generateReportElement( $id, $userIdentity ) {
 		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		if ( $dbr->selectRow( 'report_reports', [ 'report_id' ], [
 			'report_revid' => $id,
@@ -67,18 +89,18 @@ class ReportHooks {
 	}
 
 	/**
-	 * @param OutputPage &$out
-	 * @param Skin &$skin
-	 * @return bool
+	 * @param OutputPage $out
+	 * @param Skin $skin
+	 * @return void
 	 */
-	public static function reportsAwaitingNotice( &$out, &$skin ) {
+	public function onBeforePageDisplay( $out, $skin ): void {
 		$context = $out->getContext();
 		if ( !$context->getUser()->isAllowed( 'handle-reports' ) ) {
-			return true;
+			return;
 		}
 		$title = $context->getTitle();
 		if ( !( $title->isSpecial( 'Recentchanges' ) || $title->isSpecial( 'Watchlist' ) ) ) {
-			return true;
+			return;
 		}
 		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		if ( ( $count = $dbr->selectRowCount( 'report_reports', '*', [
@@ -94,7 +116,6 @@ class ReportHooks {
 			) );
 			$out->addModules( 'ext.report' );
 		}
-		return true;
 	}
 
 }
