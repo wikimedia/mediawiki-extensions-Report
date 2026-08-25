@@ -32,13 +32,20 @@
 	},
 	"HookHandlers": {
 		"main": {
-			"class": "MediaWiki\\Extension\\Report\\ReportHooks"
+			"class": "MediaWiki\\Extension\\Report\\ReportHooks",
+			"services": [
+				"ConnectionProvider",
+				"UserFactory"
+			]
+		},
+		"schema": {
+			"class": "MediaWiki\\Extension\\Report\\SchemaHooks"
 		}
 	},
 	"Hooks": {
-		"LoadExtensionSchemaUpdates": "main",
-		"HistoryTools": "MediaWiki\\Extension\\Report\\ReportHooks::insertReportLink",
-		"DiffTools": "MediaWiki\\Extension\\Report\\ReportHooks::insertReportLink",
+		"LoadExtensionSchemaUpdates": "schema",
+		"HistoryTools": "main",
+		"DiffTools": "main",
 		"BeforePageDisplay": "main"
 	},
 	"GroupPermissions": {

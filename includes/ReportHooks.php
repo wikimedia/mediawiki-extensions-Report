@@ -2,32 +2,23 @@
 namespace MediaWiki\Extension\Report;
 
 use MediaWiki\Html\Html;
-use MediaWiki\Installer\DatabaseUpdater;
-use MediaWiki\MediaWikiServices;
 use MediaWiki\Output\OutputPage;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Skin\Skin;
 use MediaWiki\SpecialPage\SpecialPage;
+use MediaWiki\User\UserFactory;
 use MediaWiki\User\UserIdentity;
+use Wikimedia\Rdbms\IConnectionProvider;
 
 class ReportHooks implements
 	\MediaWiki\Actions\Hook\HistoryToolsHook,
 	\MediaWiki\Diff\Hook\DiffToolsHook,
-	\MediaWiki\Installer\Hook\LoadExtensionSchemaUpdatesHook,
 	\MediaWiki\Output\Hook\BeforePageDisplayHook
 {
-
-	/**
-	 * @param DatabaseUpdater $updater
-	 * @return bool
-	 */
-	public function onLoadExtensionSchemaUpdates( $updater ) {
-		$sql_dir = dirname( __DIR__ ) . '/sql';
-		$updater->addExtensionTable(
-			'report_reports',
-			$sql_dir . '/table.sql'
-		);
-		return true;
+	public function __construct(
+		private readonly IConnectionProvider $dbProvider,
+		private readonly UserFactory $userFactory,
+	) {
 	}
 
 	/**
@@ -54,7 +45,7 @@ class ReportHooks implements
 	}
 
 	private function insertReportLink( RevisionRecord $revRecord, array &$links, UserIdentity $userIdentity ) {
-		$user = MediaWikiServices::getInstance()->getUserFactory()->newFromUserIdentity( $userIdentity );
+		$user = $this->userFactory->newFromUserIdentity( $userIdentity );
 		if ( $user->isAllowed( 'report' ) && !$user->getBlock() &&
 		!$user->isAllowed( 'handle-reports' ) ) {
 			$links[] = $this->generateReportElement( $revRecord->getID(), $userIdentity );
@@ -67,7 +58,7 @@ class ReportHooks implements
 	 * @return string
 	 */
 	private function generateReportElement( $id, $userIdentity ) {
-		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
+		$dbr = $this->dbProvider->getReplicaDatabase();
 		if ( $dbr->selectRow( 'report_reports', [ 'report_id' ], [
 			'report_revid' => $id,
 			'report_user' => $userIdentity->getId()
@@ -102,7 +93,7 @@ class ReportHooks implements
 		if ( !( $title->isSpecial( 'Recentchanges' ) || $title->isSpecial( 'Watchlist' ) ) ) {
 			return;
 		}
-		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
+		$dbr = $this->dbProvider->getReplicaDatabase();
 		if ( ( $count = $dbr->selectRowCount( 'report_reports', '*', [
 			'report_handled != 1',
 		], __METHOD__ ) ) > 0 ) {
