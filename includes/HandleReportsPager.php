@@ -2,9 +2,9 @@
 namespace MediaWiki\Extension\Report;
 
 use MediaWiki\Html\Html;
+use MediaWiki\Pager\ReverseChronologicalPager;
+use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\User\UserFactory;
-use ReverseChronologicalPager;
-use SpecialPage;
 use stdClass;
 
 class HandleReportsPager extends ReverseChronologicalPager {

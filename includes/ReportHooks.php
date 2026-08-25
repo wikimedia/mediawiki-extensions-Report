@@ -1,14 +1,14 @@
 <?php
 namespace MediaWiki\Extension\Report;
 
-use DatabaseUpdater;
 use MediaWiki\Html\Html;
+use MediaWiki\Installer\DatabaseUpdater;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Output\OutputPage;
 use MediaWiki\Revision\RevisionRecord;
+use MediaWiki\Skin\Skin;
+use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\User\UserIdentity;
-use OutputPage;
-use Skin;
-use SpecialPage;
 
 class ReportHooks {
 

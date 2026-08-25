@@ -2,10 +2,10 @@
 namespace MediaWiki\Extension\Report;
 
 use MediaWiki\Html\Html;
+use MediaWiki\Output\OutputPage;
+use MediaWiki\SpecialPage\SpecialPage;
+use MediaWiki\User\User;
 use MediaWiki\User\UserFactory;
-use OutputPage;
-use SpecialPage;
-use User;
 use Wikimedia\Rdbms\IConnectionProvider;
 
 class SpecialHandleReports extends SpecialPage {

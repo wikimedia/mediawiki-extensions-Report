@@ -2,11 +2,11 @@
 namespace MediaWiki\Extension\Report;
 
 use MediaWiki\Html\Html;
+use MediaWiki\Output\OutputPage;
+use MediaWiki\Request\WebRequest;
 use MediaWiki\Revision\RevisionLookup;
-use OutputPage;
-use SpecialPage;
-use User;
-use WebRequest;
+use MediaWiki\SpecialPage\SpecialPage;
+use MediaWiki\User\User;
 use Wikimedia\Rdbms\IConnectionProvider;
 
 class SpecialReport extends SpecialPage {
