@@ -30,7 +30,6 @@ class SpecialHandleReports extends SpecialPage {
 		$user = $this->getUser();
 		if ( !$this->userCanExecute( $user ) ) {
 			$this->displayRestrictionError();
-			return;
 		}
 		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		if ( !ctype_digit( $par ) ) {
@@ -106,7 +105,8 @@ class SpecialHandleReports extends SpecialPage {
 		$userFactory = $services->getUserFactory();
 
 		if ( $this->getRequest()->wasPosted() ) {
-			return $this->onPost( $par, $out, $user );
+			$this->onPost( $par, $out, $user );
+			return;
 		}
 		$dbcols = [
 			'report_reason',

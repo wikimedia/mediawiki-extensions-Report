@@ -4,11 +4,11 @@ namespace MediaWiki\Extension\Report;
 use DatabaseUpdater;
 use MediaWiki\Html\Html;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\User\UserIdentity;
 use OutputPage;
 use Skin;
 use SpecialPage;
-use User;
 
 class ReportHooks {
 
@@ -26,9 +26,9 @@ class ReportHooks {
 	}
 
 	/**
-	 * @param int $revRecord
+	 * @param RevisionRecord $revRecord
 	 * @param array &$links
-	 * @param int $oldRevRecord
+	 * @param RevisionRecord|null $oldRevRecord
 	 * @param UserIdentity $userIdentity
 	 */
 	public static function insertReportLink( $revRecord, &$links, $oldRevRecord, $userIdentity ) {
@@ -41,14 +41,14 @@ class ReportHooks {
 
 	/**
 	 * @param int $id
-	 * @param User $user
+	 * @param UserIdentity $userIdentity
 	 * @return string
 	 */
-	protected static function generateReportElement( $id, $user ) {
+	protected static function generateReportElement( $id, $userIdentity ) {
 		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 		if ( $dbr->selectRow( 'report_reports', [ 'report_id' ], [
 			'report_revid' => $id,
-			'report_user' => $user->getId()
+			'report_user' => $userIdentity->getId()
 		], __METHOD__ ) ) {
 			return Html::element(
 				'span', [ 'class' => 'mw-report-reported' ],
@@ -59,7 +59,7 @@ class ReportHooks {
 				'a',
 				[
 					'class' => 'mw-report-report-link',
-					'href' => SpecialPage::getTitleFor( 'Report', $id )->getLocalURL(),
+					'href' => SpecialPage::getTitleFor( 'Report', (string)$id )->getLocalURL(),
 				],
 				wfMessage( 'report-report' )->text()
 			);

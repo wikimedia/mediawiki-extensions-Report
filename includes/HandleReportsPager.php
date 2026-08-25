@@ -5,6 +5,7 @@ use MediaWiki\Html\Html;
 use MediaWiki\MediaWikiServices;
 use ReverseChronologicalPager;
 use SpecialPage;
+use stdClass;
 
 class HandleReportsPager extends ReverseChronologicalPager {
 	/** @var array */
@@ -40,7 +41,7 @@ class HandleReportsPager extends ReverseChronologicalPager {
 	}
 
 	/**
-	 * @param array $row
+	 * @param stdClass $row
 	 * @return string
 	 */
 	public function formatRow( $row ) {
